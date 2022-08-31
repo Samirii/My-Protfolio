@@ -16,7 +16,8 @@ body {
 
 a {
     text-decoration: none;
-    color-scheme: red;
+    color: var(--main1);
+    font-weight: bold;
 }
 
 li {
@@ -59,9 +60,10 @@ li {
 .header .container nav ul li a:hover {
     color: #601cfc;
 }
+
 .header .container nav ul li a {
-    color:var(--main1) ; 
-    font-weight:bold ; 
+    color: var(--main1);
+    font-weight: bold;
 }
 
 
@@ -74,11 +76,15 @@ li {
 
 
 
-
 .my {
-       background-image: url("img/7f00e000-8344-11ea-8365-e7770dbdd94b.jfif");
-    background-size: cover;
+    width: 100%;
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(/img/7f00e000-8344-11ea-8365-e7770dbdd94b.jfif) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .my .container h3 {
@@ -345,14 +351,32 @@ li {
     margin-left: 19px;
     }
     .my {
-        width: 1083px;
+        width: 1090px;
+    min-height: 288vh;
         
     }
     .my::after{
-        width: 1024px;
+        width: 1087px;
+    min-height: 290vh;
     }
     .my .container h3 {
         margin: -35px;
+        font-size: 200px;
+        position: relative;
+        left: -82px;
+        top: -173px;
+    }
+    .my .container a{
+        position: relative;
+        padding: 79px 145px;
+        font-size: 53px;
+        top: 240px;
+        right: 73px;
+        border-radius: 84px;
+    }
+    .my .container a:hover{
+        font-size: 50px;
+    }
     }
     .main-titel {
         
@@ -414,4 +438,4 @@ font-size: 50px;
     .footer {
         width: 1078px;
     }
-    }
+    
