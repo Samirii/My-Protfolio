@@ -59,7 +59,10 @@ li {
 .header .container nav ul li a:hover {
     color: #601cfc;
 }
-
+.header .container nav ul li a {
+    color:var(--main1) ; 
+    font-weight:bold ; 
+}
 
 
 
