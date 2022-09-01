@@ -25,7 +25,7 @@ li {
 }
 
 .container {
-    padding: 10px 200px;
+    padding: 10px 150px;
 }
 
 
@@ -379,7 +379,7 @@ li {
     }
     .main-titel {
         
-        transform: translateX(85%);
+        transform: translateX(96%);
     font-size: 4.8em;
     }
     .Services .container  {
@@ -387,8 +387,9 @@ li {
 
     }
     .Services .container .box {
-    width: 672px;
-    transform: translatex(3%);
+        width: 672px;
+        transform: translatex(13%);
+        margin: 16px -21px;
 
     }
     .Services .container .box i {
@@ -408,7 +409,7 @@ font-size: 313px;
 
     }
     .Projects {
-        width: 1078px;
+        width: 1094px;
     }
     .Projects .container .box {
 
@@ -425,7 +426,6 @@ font-size: 50px;
         height: 597px;
         font-size: 73px;
         position: relative;
-        left: -39px;
     }
     .work .container .box .content i {
         font-size: 214px;
@@ -435,6 +435,8 @@ font-size: 50px;
         font-size: 44px;
     }
     .footer {
-        width: 1078px;
+        width: 1098px;
     }
     }
+
+    
