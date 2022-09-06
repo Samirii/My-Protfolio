@@ -43,10 +43,6 @@ li {
     padding-bottom: 0px;
 }
 
-.header .container nav ul {
-    display: flex;
-}
-
 .header .container .logo {
     color: var(--main1);
     font-size: 11px;
@@ -66,8 +62,69 @@ li {
     font-weight: bold;
 }
 
+label {
+    display: none;
+    position: relative;
+    z-index: 1;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+label {
+
+    width: 98px;
+    height: 17px;
+    margin-bottom: 5px;
+    position: relative;
+    border-radius: 6px;
+    z-index: 1;
+    transform-origin: 0 0;
+    transition: 0.4s;
+    font-size: 69px;
+    position: absolute;
+    left: 87%;
+    top: 35%;
+}
+
+@media (min-width:1200px) {
+    .header ul {
+        display: flex;
+        gap: 47px;
+    }
+}
+
+@media (max-width:768px) {
+    .checkbtn {
+        display: block;
+    }
+
+    .header ul {
+
+        background-color: white;
+        font-size: 79px;
+        position: fixed;
+        top: 208px;
+        margin: 14px  14px;
+        padding: 394px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        left: -102%;
+        transition: 0.3s;
+    }
+    .header ul li {
+        margin-bottom: 225px;
+    }
+
+    #check:checked~ ul {
+        left: -18px;
+    }
 
 
+}
 
 
 
@@ -81,7 +138,7 @@ li {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(img/7f00e000-8344-11ea-8365-e7770dbdd94b.jfif) no-repeat;
+    background-color: rgb(0, 0, 22);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -105,16 +162,6 @@ li {
     padding: 18px 25px;
     font-size: 18px;
     transition: 0.3s;
-}
-
-.my::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #000000b5;
 }
 
 .my .container a:hover {
@@ -338,27 +385,26 @@ li {
 
 
 @media (max-width:1023px) {
-    .header{
+    .header {
         padding: 12px 20px;
     }
 
     .header .logo h1 {
-        font-size: 47px;
-    margin-left: -176px;
+        font-size: 75px;
+        margin-left: -105px;
     }
-    .header nav ul li a {
-        font-size: 41px;
-    margin-left: 19px;
-    }
+
     .my {
-        width: 1090px;
-    min-height: 288vh;
-        
+        width: 1102px;
+        min-height: 305vh;
+
     }
-    .my::after{
+
+    .my::after {
         width: 1087px;
-    min-height: 290vh;
+        min-height: 290vh;
     }
+
     .my .container h3 {
         margin: -35px;
         font-size: 200px;
@@ -366,7 +412,8 @@ li {
         left: -82px;
         top: -173px;
     }
-    .my .container a{
+
+    .my .container a {
         position: relative;
         padding: 79px 145px;
         font-size: 53px;
@@ -374,69 +421,95 @@ li {
         right: 73px;
         border-radius: 84px;
     }
-    .my .container a:hover{
+
+    .my .container a:hover {
         font-size: 50px;
     }
+
     .main-titel {
-        
+
         transform: translateX(96%);
-    font-size: 4.8em;
+        font-size: 4.8em;
     }
-    .Services .container  {
+
+    .Services .container {
         flex-direction: column;
 
     }
+
     .Services .container .box {
         width: 672px;
         transform: translatex(13%);
         margin: 16px -21px;
 
     }
+
     .Services .container .box i {
-font-size: 313px;
+        font-size: 313px;
     }
+
     .Services .container .box h3 {
         font-size: 64px;
     }
+
     .Services .container .box p {
-        font-size : 31px ; 
+        font-size: 31px;
     }
+
     .Services .container .box p:hover {
         transform: scale(.5);
     }
+
     .Projects .main-titel {
         transform: translateX(0px);
 
     }
+
     .Projects {
         width: 1094px;
     }
+
     .Projects .container .box {
 
-font-size: 50px;
+        font-size: 50px;
     }
-    .Projects .container .box h2{
+
+    .Projects .container .box h2 {
         font-size: 62px;
     }
+
     .work .container {
-        width:1023px ; 
+        width: 1023px;
     }
+
     .work .container .box {
         width: 654px;
         height: 597px;
         font-size: 73px;
         position: relative;
     }
+
     .work .container .box .content i {
         font-size: 214px;
 
     }
-    .work .container .box .content p{
+
+    .work .container .box .content p {
         font-size: 44px;
     }
+
     .footer {
         width: 1098px;
     }
-    }
 
-    
+
+
+
+}
+
+
+
+
+#check {
+    display: none;
+}
