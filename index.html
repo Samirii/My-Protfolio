@@ -1,60 +1,178 @@
-<!DOCTYPE html>
-<html lang="en">
+:root {
+    --main1: rgb(58, 108, 244);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main1);
+    font-weight: bold;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    padding: 10px 150px;
+}
+
+
+.header {
+    background-color: rgb(240, 240, 240);
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0px;
+}
+
+.header .container .logo {
+    color: var(--main1);
+    font-size: 11px;
+}
+
+.header .container nav ul li {
+    margin-left: 40px;
+    color: var(--main1);
+}
+
+.header .container nav ul li a:hover {
+    color: #601cfc;
+}
+
+.header .container nav ul li a {
+    color: var(--main1);
+    font-weight: bold;
+}
+
+label {
+    display: none;
+    position: relative;
+    z-index: 1;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+label {
+
+    width: 98px;
+    height: 17px;
+    margin-bottom: 5px;
+    position: relative;
+    border-radius: 6px;
+    z-index: 1;
+    transform-origin: 0 0;
+    transition: 0.4s;
+    font-size: 69px;
+    position: absolute;
+    left: 87%;
+    top: 35%;
+}
+
+@media (min-width:1200px) {
+    .header ul {
+        display: flex;
+        gap: 47px;
+    }
+}
+
+@media (max-width:768px) {
+    .checkbtn {
+        display: block;
+    }
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/norm.css">
-    <link rel="stylesheet" href="css/pro.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
-    <title>Elshenawy</title>
-</head>
+    .header ul {
 
-<body>
+        background-color: white;
+        font-size: 79px;
+        position: fixed;
+        top: 208px;
+        margin: 14px  14px;
+        padding: 394px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        left: -102%;
+        transition: 0.3s;
+    }
+    .header ul li {
+        margin-bottom: 225px;
+    }
 
+    #check:checked~ ul {
+        left: -18px;
+    }
+    .Projects .container .pro img {
+        height: 80vh;
+    }
 
-    <div class="header">
-        <div class="container">
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <i class="fa fa-bars"></i>
-            </label>
-            <div class="logo">
-                <h1>Elshenawy</h1>
+}
 
-            </div>
-         <ul>
-                    <li><a href="#Services">Services</a></li>
-                    <li><a href="#Projects">Projects</a></li>
-                    <li><a href="#Contact">Contact</a></li>
-                </ul>
 
-            
 
 
 
 
 
 
-        </div>
-    </div>
+.my {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 0, 22);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 
+.my .container h3 {
+    position: absolute;
+    color: var(--main1);
+    top: 50%;
+    font-size: 60px;
+    z-index: 1;
+}
 
+.my .container a {
+    position: absolute;
+    top: 65%;
+    z-index: 1;
+    color: white;
+    background-color: var(--main1);
+    border-radius: 21px;
+    padding: 18px 25px;
+    font-size: 18px;
+    transition: 0.3s;
+}
 
+.my .container a:hover {
+    background-color: blue;
+    font-size: 23px;
+}
 
 
 
-    <div class="my">
-        <div class="container">
-            <h3>Content Creator
-            </h3>
-            <a href="#Projects">View my work</a>
-        </div>
-    </div>
 
 
 
@@ -62,74 +180,60 @@
 
 
 
-    <div class="Services" id="Services">
-        <h3 class="main-titel">Services
-        </h3>
-        <div class="container">
-            <div class="box">
-                <i class="fas fa-edit"></i>
-                <h3>Script Writing</h3>
-                <p>Research and write scripts for different topics that can then be directly recorded for video
-                    production</p>
-            </div>
-            <div class="box">
-                <i class="fas fa-video"></i>
-                <h3>Video Production</h3>
-                <p>Record and shoot videos taking into consideration proper settings, followed by production &
-                    post-production work</p>
-            </div>
-            <div class="box">
-                <i class="fas fa-graduation-cap"></i>
-                <h3>Curriculum Development</h3>
-                <p>
-                    Develop complete curriculums for various technical topics to produce digital transformative courses
-                </p>
-            </div>
 
-        </div>
-    </div>
 
+.Services {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
 
+.main-titel {
+    color: var(--main1);
+    text-align: center;
+    font-size: 43px;
+    font-weight: bold;
+}
 
+.Services .container {
+    display: flex;
+    gap: 75px;
+    margin-top: 56px;
+}
 
+.Services .container .box {
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(1, 1, 1, 0.15) 0px 5px 25px;
+    text-align: center;
+    padding: 25px;
+    margin: -28px;
+    transition: 0.3s;
+    border-radius: 15px
+}
 
+.Services .container .box i {
+    color: var(--main1);
+    font-size: 120px;
+    margin-bottom: 39px;
+    padding: 15px;
 
+}
 
+.Services .container .box h3 {
+    color: var(--main1);
+    margin-bottom: 15px;
 
+}
 
+.Services .container .box p {
+    line-height: 1.5;
+    padding: 15px 20px;
+}
 
+.Services .container .box:hover {
+    transform: scale(1.1);
+}
 
-    <div class="Projects" id="Projects">
-        <h3 class="main-titel">Projects</h3>
-        <div class="container">
-            <div class="box">
-                <div class="pro">
-                    <img src="img/Screenshot (99).png" alt="">
-                    <a href="https://samirii.github.io/Leon-Template-One/
-                    ">Go TO Site</a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="pro">
-                    <img src="img/Screenshot (100).png" alt="">
-                <a href="https://samirii.github.io/Kasper-Tamplate-2-/">Go TO Site</a>
-                </div>
-                
-               
-            </div>
-            <div class="box">
-                <div class="pro">
-                    <img src="img/Screenshot (101).png" alt="">
-                    <a href="https://samirii.github.io/template-4-/">Go TO Site</a>
-                </div>
-                
-            </div>
-            <div class="box">
-                <h2>Cooming Soon</h2>
-            </div>
 
-        </div>
-    </div>
 
 
 
@@ -138,54 +242,291 @@
 
 
 
-    <div class="work" id="Contact">
-        <h3 class="main-titel">Let's work together
-        </h3>
-        <div class="container">
-            <div class="box">
-                <div class="content">
-                    <i class="fas fa-phone"></i>
-                    <h3>Phone</h3>
-                    <p>+201154188662</p>
-                </div>
 
-            </div>
-            <div class="box">
-                <div class="content">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
-                    <p>semsem.rsm@gmail.com</p>
-                </div>
 
-            </div>
 
-        </div>
-    </div>
 
 
 
 
 
+.Projects {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: rgb(0, 0, 22);
+}
 
+.Projects .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 30px;
+    padding: 76px 203px;
+    ;
 
+}
 
+.Projects .container .box {
+    color: var(--main1);
+    background-color: white;
+    height: 15em;
+    width: 26em;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.3s;
+}
 
+.Projects .container .box h2 {
+    position: relative;
+    top: 41%;
+    font-size: 41px;
+}
 
-    <div class="footer">
-        <h3>Copyrights <span>@ Samir Elshenawy</span> </h3>
-        <ul>
-            <li><a href=""><i class="fab fa-linkedin"></i></a></li>
-            <li><a href=""><i class="fab fa-twitter"></i></a></li>
-            <li><a href=""><i class="fab fa-instagram"></i></a></li>
-            <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
-        </ul>
+.Projects .container .box:hover {
+    transform: scale(1.1);
+}
 
-    </div>
+.Projects .container .pro img {
+    width: 100%;
+}
 
+.Projects .container .pro a {
+    background-color: var(--main1);
+    color: white;
+    border-radius: 12px;
+    padding: 9px 150px;
+    position: relative;
+    top: 13px;
+}
 
 
 
 
-</body>
 
-</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.work {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.work .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 47px;
+    justify-content: center;
+    margin: 50px;
+}
+
+.work .container .box {
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(1 1 1 / 15%) 0px 5px 25px;
+    width: 371px;
+    height: 233px;
+    text-align: center;
+    padding: 27px;
+    border-radius: 19px;
+    transition: 0.3s;
+}
+
+.work .container .box .content i {
+    color: var(--main1);
+    font-size: 70px;
+    margin-bottom: 17px;
+}
+
+.work .container .box .content h3 {
+    margin-bottom: 15px;
+}
+
+.work .container .box .content p {
+    font-size: 24px;
+}
+
+.work .container .box:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+.footer {
+    background-color: rgb(0, 0, 22);
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+}
+
+.footer h3 span {
+    color: var(--main1);
+}
+
+.footer h3 {
+    margin-left: 30px;
+}
+
+.footer ul {
+    display: flex;
+    gap: 25px;
+    padding: 40px;
+}
+
+.footer ul li {
+    font-size: 24px;
+}
+
+.footer ul li i {
+    color: white;
+}
+
+
+
+@media (max-width:1023px) {
+    .header {
+        padding: 12px 20px;
+    }
+
+    .header .logo h1 {
+        font-size: 75px;
+        margin-left: -105px;
+    }
+
+    .my {
+        width: 1102px;
+        min-height: 305vh;
+
+    }
+
+    .my::after {
+        width: 1087px;
+        min-height: 290vh;
+    }
+
+    .my .container h3 {
+        margin: -35px;
+        font-size: 200px;
+        position: relative;
+        left: -82px;
+        top: -173px;
+    }
+
+    .my .container a {
+        position: relative;
+        padding: 79px 145px;
+        font-size: 53px;
+        top: 240px;
+        right: 73px;
+        border-radius: 84px;
+    }
+
+    .my .container a:hover {
+        font-size: 50px;
+    }
+
+    .main-titel {
+
+        transform: translateX(96%);
+        font-size: 4.8em;
+    }
+
+    .Services .container {
+        flex-direction: column;
+
+    }
+
+    .Services .container .box {
+        width: 672px;
+        transform: translatex(13%);
+        margin: 16px -21px;
+
+    }
+
+    .Services .container .box i {
+        font-size: 313px;
+    }
+
+    .Services .container .box h3 {
+        font-size: 64px;
+    }
+
+    .Services .container .box p {
+        font-size: 31px;
+    }
+
+    .Services .container .box p:hover {
+        transform: scale(.5);
+    }
+
+    .Projects .main-titel {
+        transform: translateX(0px);
+
+    }
+
+    .Projects {
+        width: 1094px;
+    }
+
+    .Projects .container .box {
+
+        
+    font-size: 43px;
+
+    }
+
+    .Projects .container .box h2 {
+        font-size: 62px;
+    }
+
+    .work .container {
+        width: 1023px;
+    }
+
+    .work .container .box {
+        width: 654px;
+        height: 597px;
+        font-size: 73px;
+        position: relative;
+    }
+
+    .work .container .box .content i {
+        font-size: 214px;
+
+    }
+
+    .work .container .box .content p {
+        font-size: 44px;
+    }
+
+    .footer {
+        width: 1098px;
+    }
+
+
+
+
+}
+
+
+
+
+#check {
+    display: none;
+}
