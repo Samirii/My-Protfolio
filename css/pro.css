@@ -285,6 +285,19 @@ label {
     transform: scale(1.1);
 }
 
+.Projects .container .pro img {
+    width: 100%;
+}
+
+.Projects .container .pro a {
+    background-color: var(--main1);
+    color: white;
+    border-radius: 12px;
+    padding: 9px 150px;
+    position: relative;
+    top: 13px;
+}
+
 
 
 
