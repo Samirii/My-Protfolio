@@ -122,7 +122,9 @@ label {
     #check:checked~ ul {
         left: -18px;
     }
-
+    .Projects .container .pro img {
+        height: 80vh;
+    }
 
 }
 
@@ -484,7 +486,9 @@ label {
 
     .Projects .container .box {
 
-        font-size: 50px;
+        
+    font-size: 43px;
+
     }
 
     .Projects .container .box h2 {
